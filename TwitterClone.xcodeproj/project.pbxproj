@@ -13,6 +13,10 @@
 		EEE08AB7249E94BC00256C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE08AB6249E94BC00256C6D /* Assets.xcassets */; };
 		EEE08ABA249E94BC00256C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE08AB8249E94BC00256C6D /* LaunchScreen.storyboard */; };
 		EEE08AC8249E95CF00256C6D /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE08AC7249E95CF00256C6D /* MainTabController.swift */; };
+		EEE08ACA249E982200256C6D /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE08AC9249E982200256C6D /* FeedController.swift */; };
+		EEE08ACC249E986E00256C6D /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE08ACB249E986E00256C6D /* ExploreController.swift */; };
+		EEE08ACE249E987C00256C6D /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE08ACD249E987C00256C6D /* NotificationsController.swift */; };
+		EEE08AD0249E988B00256C6D /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE08ACF249E988B00256C6D /* ConversationsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		EEE08AB9249E94BC00256C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEE08ABB249E94BC00256C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEE08AC7249E95CF00256C6D /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		EEE08AC9249E982200256C6D /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		EEE08ACB249E986E00256C6D /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
+		EEE08ACD249E987C00256C6D /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
+		EEE08ACF249E988B00256C6D /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,10 @@
 			isa = PBXGroup;
 			children = (
 				EEE08AC7249E95CF00256C6D /* MainTabController.swift */,
+				EEE08AC9249E982200256C6D /* FeedController.swift */,
+				EEE08ACB249E986E00256C6D /* ExploreController.swift */,
+				EEE08ACD249E987C00256C6D /* NotificationsController.swift */,
+				EEE08ACF249E988B00256C6D /* ConversationsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,9 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE08ACE249E987C00256C6D /* NotificationsController.swift in Sources */,
+				EEE08AD0249E988B00256C6D /* ConversationsController.swift in Sources */,
 				EEE08AAE249E94B900256C6D /* AppDelegate.swift in Sources */,
+				EEE08ACC249E986E00256C6D /* ExploreController.swift in Sources */,
 				EEE08AB0249E94B900256C6D /* SceneDelegate.swift in Sources */,
 				EEE08AC8249E95CF00256C6D /* MainTabController.swift in Sources */,
+				EEE08ACA249E982200256C6D /* FeedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
