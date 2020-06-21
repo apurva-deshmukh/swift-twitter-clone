@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE0B096424A01E17003772F2 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0B096324A01E17003772F2 /* LoginController.swift */; };
 		EE0B096624A01EAF003772F2 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0B096524A01EAF003772F2 /* RegistrationController.swift */; };
+		EE0B096824A02403003772F2 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0B096724A02403003772F2 /* Utilities.swift */; };
 		EEE08AAE249E94B900256C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE08AAD249E94B900256C6D /* AppDelegate.swift */; };
 		EEE08AB0249E94B900256C6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE08AAF249E94B900256C6D /* SceneDelegate.swift */; };
 		EEE08AB5249E94B900256C6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE08AB3249E94B900256C6D /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		EE0B096324A01E17003772F2 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		EE0B096524A01EAF003772F2 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		EE0B096724A02403003772F2 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		EEE08AAA249E94B900256C6D /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE08AAD249E94B900256C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEE08AAF249E94B900256C6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				EEE08AD1249EA0DD00256C6D /* Extensions.swift */,
+				EE0B096724A02403003772F2 /* Utilities.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				EEE08ACE249E987C00256C6D /* NotificationsController.swift in Sources */,
 				EEE08AD0249E988B00256C6D /* ConversationsController.swift in Sources */,
+				EE0B096824A02403003772F2 /* Utilities.swift in Sources */,
 				EEE08AAE249E94B900256C6D /* AppDelegate.swift in Sources */,
 				EEE08AD2249EA0DD00256C6D /* Extensions.swift in Sources */,
 				EE0B096424A01E17003772F2 /* LoginController.swift in Sources */,
