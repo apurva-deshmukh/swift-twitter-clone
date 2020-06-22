@@ -11,6 +11,7 @@
 		EE076C3524A1084E00F23703 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE076C3424A1084E00F23703 /* UserService.swift */; };
 		EE076C3724A10BC900F23703 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE076C3624A10BC900F23703 /* User.swift */; };
 		EE076C3924A1358700F23703 /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE076C3824A1358700F23703 /* UploadTweetController.swift */; };
+		EE076C3B24A13D4C00F23703 /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE076C3A24A13D4C00F23703 /* CaptionTextView.swift */; };
 		EE0B096424A01E17003772F2 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0B096324A01E17003772F2 /* LoginController.swift */; };
 		EE0B096624A01EAF003772F2 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0B096524A01EAF003772F2 /* RegistrationController.swift */; };
 		EE0B096824A02403003772F2 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0B096724A02403003772F2 /* Utilities.swift */; };
@@ -37,6 +38,7 @@
 		EE076C3424A1084E00F23703 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		EE076C3624A10BC900F23703 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EE076C3824A1358700F23703 /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
+		EE076C3A24A13D4C00F23703 /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 		EE0B096324A01E17003772F2 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		EE0B096524A01EAF003772F2 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		EE0B096724A02403003772F2 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		EEE08AC5249E94FE00256C6D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EE076C3A24A13D4C00F23703 /* CaptionTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			files = (
 				EE076C3524A1084E00F23703 /* UserService.swift in Sources */,
 				EEE08ACE249E987C00256C6D /* NotificationsController.swift in Sources */,
+				EE076C3B24A13D4C00F23703 /* CaptionTextView.swift in Sources */,
 				EEE08AD0249E988B00256C6D /* ConversationsController.swift in Sources */,
 				EE0B096824A02403003772F2 /* Utilities.swift in Sources */,
 				EEE08AAE249E94B900256C6D /* AppDelegate.swift in Sources */,
