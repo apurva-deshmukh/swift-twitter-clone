@@ -12,6 +12,12 @@ class FeedController: UIViewController {
     
     // MARK: - Properties
     
+    var user: User? {
+        didSet {
+            print("DEBUG: Did set user in feed controller")
+        }
+    }
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -22,6 +28,8 @@ class FeedController: UIViewController {
     }
     
     // MARK: - Helpers
+    
+    
     
     func configureUI() {
         
