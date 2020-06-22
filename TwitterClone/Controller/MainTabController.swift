@@ -74,9 +74,9 @@ class MainTabController: UITabBarController {
     // MARK: - Selectors
     
     @objc func actionButtonTapped() {
-        
-        print("123")
-        
+        let nav = UINavigationController(rootViewController: UploadTweetController())
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true)
     }
     
     // MARK: - Helpers
@@ -93,7 +93,6 @@ class MainTabController: UITabBarController {
     }
 
     func configureViewControllers() {
-        
         let feed = FeedController()
         let nav1 = templateNavigationController(image: UIImage(named: "home_unselected"),
                                                 rootViewController: feed)
@@ -110,16 +109,13 @@ class MainTabController: UITabBarController {
                                                 rootViewController: conversations)
         
         viewControllers = [nav1, nav2, nav3, nav4]
-        
     }
 
     func templateNavigationController(image: UIImage?, rootViewController: UIViewController) -> UINavigationController {
-        
         let nav = UINavigationController(rootViewController: rootViewController)
         nav.tabBarItem.image = image
         nav.navigationBar.barTintColor = .white
         return nav
-        
     }
     
 }

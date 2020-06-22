@@ -10,6 +10,7 @@
 		D96613E7958B0132BB78CF19 /* Pods_TwitterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BDF9AD6DA59AA80804AFAC /* Pods_TwitterClone.framework */; };
 		EE076C3524A1084E00F23703 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE076C3424A1084E00F23703 /* UserService.swift */; };
 		EE076C3724A10BC900F23703 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE076C3624A10BC900F23703 /* User.swift */; };
+		EE076C3924A1358700F23703 /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE076C3824A1358700F23703 /* UploadTweetController.swift */; };
 		EE0B096424A01E17003772F2 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0B096324A01E17003772F2 /* LoginController.swift */; };
 		EE0B096624A01EAF003772F2 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0B096524A01EAF003772F2 /* RegistrationController.swift */; };
 		EE0B096824A02403003772F2 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0B096724A02403003772F2 /* Utilities.swift */; };
@@ -35,6 +36,7 @@
 		E0BDF9AD6DA59AA80804AFAC /* Pods_TwitterClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE076C3424A1084E00F23703 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		EE076C3624A10BC900F23703 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EE076C3824A1358700F23703 /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
 		EE0B096324A01E17003772F2 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		EE0B096524A01EAF003772F2 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		EE0B096724A02403003772F2 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				EEE08ACB249E986E00256C6D /* ExploreController.swift */,
 				EEE08ACD249E987C00256C6D /* NotificationsController.swift */,
 				EEE08ACF249E988B00256C6D /* ConversationsController.swift */,
+				EE076C3824A1358700F23703 /* UploadTweetController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				EEE08AD2249EA0DD00256C6D /* Extensions.swift in Sources */,
 				EE0B096424A01E17003772F2 /* LoginController.swift in Sources */,
 				EEDAB42824A0FA8F000283C0 /* AuthService.swift in Sources */,
+				EE076C3924A1358700F23703 /* UploadTweetController.swift in Sources */,
 				EE076C3724A10BC900F23703 /* User.swift in Sources */,
 				EEE08ACC249E986E00256C6D /* ExploreController.swift in Sources */,
 				EEE08AB0249E94B900256C6D /* SceneDelegate.swift in Sources */,
