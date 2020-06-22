@@ -13,6 +13,7 @@
 		EE0B096824A02403003772F2 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0B096724A02403003772F2 /* Utilities.swift */; };
 		EE5CF8E524A0EC1500754B83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE5CF8E424A0EC1500754B83 /* GoogleService-Info.plist */; };
 		EEDAB42624A0F61F000283C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDAB42524A0F61F000283C0 /* Constants.swift */; };
+		EEDAB42824A0FA8F000283C0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDAB42724A0FA8F000283C0 /* AuthService.swift */; };
 		EEE08AAE249E94B900256C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE08AAD249E94B900256C6D /* AppDelegate.swift */; };
 		EEE08AB0249E94B900256C6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE08AAF249E94B900256C6D /* SceneDelegate.swift */; };
 		EEE08AB5249E94B900256C6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE08AB3249E94B900256C6D /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		EE0B096724A02403003772F2 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		EE5CF8E424A0EC1500754B83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		EEDAB42524A0F61F000283C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EEDAB42724A0FA8F000283C0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		EEE08AAA249E94B900256C6D /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE08AAD249E94B900256C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEE08AAF249E94B900256C6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		EEE08AC2249E94F400256C6D /* API */ = {
 			isa = PBXGroup;
 			children = (
+				EEDAB42724A0FA8F000283C0 /* AuthService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				EEE08AAE249E94B900256C6D /* AppDelegate.swift in Sources */,
 				EEE08AD2249EA0DD00256C6D /* Extensions.swift in Sources */,
 				EE0B096424A01E17003772F2 /* LoginController.swift in Sources */,
+				EEDAB42824A0FA8F000283C0 /* AuthService.swift in Sources */,
 				EEE08ACC249E986E00256C6D /* ExploreController.swift in Sources */,
 				EEE08AB0249E94B900256C6D /* SceneDelegate.swift in Sources */,
 				EEE08AC8249E95CF00256C6D /* MainTabController.swift in Sources */,

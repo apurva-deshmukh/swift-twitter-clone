@@ -112,33 +112,15 @@ class RegistrationController: UIViewController {
         guard let fullname = fullNameTextField.text else { return }
         guard let username = usernameTextField.text else { return }
         
-        guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else { return }
-        let filename = NSUUID().uuidString
-        let storageRef = STORAGE_REF_PROFILE_IMAGE.child(filename)
+        let credentials = AuthCredentials(email: email,
+                                          password: password,
+                                          fullname: fullname,
+                                          username: username,
+                                          profileImage: profileImage)
     
-        storageRef.putData(imageData, metadata: nil, completion: { meta, error in
-            storageRef.downloadURL(completion: { url, error in
-                guard let profileImageUrl = url?.absoluteString else { return }
-                
-                Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-                    if let error = error {
-                        print("DEBUG: Error is \(error.localizedDescription)")
-                        return
-                    }
-                    guard let uid = result?.user.uid else { return }
-                    let values = ["email": email,
-                                  "username": username,
-                                  "fullname": fullname,
-                                  "profileImageUrl": profileImageUrl]
-                    DB_REF_USERS.child(uid).updateChildValues(values, withCompletionBlock: { error, ref in
-                        print("DEBUG: Successfully update user information")
-                    })
-                }
-            })
+        AuthService.shared.registerUser(credentials: credentials, completion: { error, ref in
+            print("DEBUG: Sign up successful...")
         })
-        
-
-
     }
     
     @objc func handleShowLogin() {
