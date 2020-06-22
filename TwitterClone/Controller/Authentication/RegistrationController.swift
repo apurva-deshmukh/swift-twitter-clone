@@ -118,8 +118,15 @@ class RegistrationController: UIViewController {
                                           username: username,
                                           profileImage: profileImage)
     
-        AuthService.shared.registerUser(credentials: credentials, completion: { error, ref in
-            print("DEBUG: Sign up successful...")
+        AuthService.shared.registerUser(credentials: credentials, completion: { [weak self] error, ref in
+            if let error = error {
+                print("DEBUG: Error logging in with error: \(error.localizedDescription)")
+                return
+            }
+            guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
+            guard let tab = window.rootViewController as? MainTabController else { return }
+            tab.authenticateUserAndConfigureUI()
+            self?.dismiss(animated: true, completion: nil)
         })
     }
     

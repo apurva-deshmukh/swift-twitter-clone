@@ -75,13 +75,15 @@ class LoginController: UIViewController {
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         
-        AuthService.shared.logUserIn(withEmail: email, password: password, completion: { result, error in
+        AuthService.shared.logUserIn(withEmail: email, password: password, completion: { [weak self] result, error in
             if let error = error {
                 print("DEBUG: Error logging in with error: \(error.localizedDescription)")
                 return
-            } else {
-                print("DEBUG: Successfully logged in")
             }
+            guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
+            guard let tab = window.rootViewController as? MainTabController else { return }
+            tab.authenticateUserAndConfigureUI()
+            self?.dismiss(animated: true, completion: nil)
         })
     }
     
