@@ -22,8 +22,7 @@ class ExploreController: UIViewController {
     }
     
     // MARK: - Helpers
-    
-    /// Configures the UI
+
     func configureUI() {
         
         view.backgroundColor = .white

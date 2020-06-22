@@ -35,7 +35,6 @@ class MainTabController: UITabBarController {
 
     // MARK: - Selectors
     
-    /// Handle action button tapped
     @objc func actionButtonTapped() {
         
         print("123")
@@ -43,8 +42,7 @@ class MainTabController: UITabBarController {
     }
     
     // MARK: - Helpers
-    
-    /// Configures the UI
+
     func configureUI() {
         
         view.addSubview(actionButton)
@@ -57,8 +55,7 @@ class MainTabController: UITabBarController {
         actionButton.layer.cornerRadius = 56 / 2
         
     }
-    
-    /// Configures the view controllers
+
     func configureViewControllers() {
         
         let feed = FeedController()
@@ -79,8 +76,7 @@ class MainTabController: UITabBarController {
         viewControllers = [nav1, nav2, nav3, nav4]
         
     }
-    
-    /// Creates a template navigation controller
+
     func templateNavigationController(image: UIImage?, rootViewController: UIViewController) -> UINavigationController {
         
         let nav = UINavigationController(rootViewController: rootViewController)
