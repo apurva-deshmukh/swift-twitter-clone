@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ProfileHeaderDelegate: class {
+    func handleDismissal()
+}
+
 class ProfileHeader: UICollectionReusableView {
     
     // MARK: - Properties
@@ -18,6 +22,7 @@ class ProfileHeader: UICollectionReusableView {
         }
     }
     
+    weak var delegate: ProfileHeaderDelegate?
     private let filterBar = ProfileFilterView()
     
     private lazy var containerView: UIView = {
@@ -93,8 +98,6 @@ class ProfileHeader: UICollectionReusableView {
     private let followingLabel: UILabel = {
         let label = UILabel()
         
-        label.text = "0 following"
-        
         let followTap = UITapGestureRecognizer(target: self, action: #selector(handleFollowingTapped))
         label.isUserInteractionEnabled = true
         label.addGestureRecognizer(followTap)
@@ -103,8 +106,6 @@ class ProfileHeader: UICollectionReusableView {
     
     private let followersLabel: UILabel = {
         let label = UILabel()
-        
-        label.text = "2 followers"
         
         let followTap = UITapGestureRecognizer(target: self, action: #selector(handleFollowersTapped))
         label.isUserInteractionEnabled = true
@@ -182,7 +183,7 @@ class ProfileHeader: UICollectionReusableView {
     // MARK: - Selectors
     
     @objc func handleDismissal() {
-        
+        delegate?.handleDismissal()
     }
     
     @objc func handleEditProfileFollow() {
