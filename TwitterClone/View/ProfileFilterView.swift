@@ -66,7 +66,7 @@ extension ProfileFilterView: UICollectionViewDelegate {
     }
 }
 
-// MARK: UICollectionViewDataSource
+// MARK: UICollectionViewDelegateFlowLayout
 
 extension ProfileFilterView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
