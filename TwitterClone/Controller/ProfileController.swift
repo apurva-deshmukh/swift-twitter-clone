@@ -115,6 +115,11 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
 extension ProfileController: ProfileHeaderDelegate {
     func handleEditProfileFollow(_ header: ProfileHeader) {
         
+        if user.isCurrentUser  {
+            print("DEBUG: Show edit profile")
+            return
+        }
+        
         if user.isFollowed{
             UserService.shared.unfollowUser(uid: user.uid, completion: { ref, error in
                 self.user.isFollowed = false
