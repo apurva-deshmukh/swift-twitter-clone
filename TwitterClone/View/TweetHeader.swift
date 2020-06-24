@@ -172,7 +172,7 @@ class TweetHeader: UICollectionReusableView {
         statsView.anchor(top: dateLabel.bottomAnchor,
                          left: leftAnchor,
                          right: rightAnchor,
-                         paddingTop: 20, height: 40)
+                         paddingTop: 12, height: 40)
         
         let actionStack = UIStackView(arrangedSubviews: [commentButton, retweetButton, likeButton, shareButton])
         actionStack.spacing = 72
