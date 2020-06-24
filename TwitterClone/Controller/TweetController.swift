@@ -22,13 +22,12 @@ class TweetController: UICollectionViewController {
         }
     }
     
-    private let actionSheetLauncher: ActionSheetLauncher
+    private var actionSheetLauncher: ActionSheetLauncher!
     
     // MARK: - Lifecycle
     
     init(tweet: Tweet) {
         self.tweet = tweet
-        self.actionSheetLauncher = ActionSheetLauncher(user: tweet.user)
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
     
@@ -108,7 +107,26 @@ extension TweetController: UICollectionViewDelegateFlowLayout {
 
 extension TweetController: TweetHeaderDelegate {
     func showActionSheet() {
-        actionSheetLauncher.show()
+        if tweet.user.isCurrentUser {
+            actionSheetLauncher = ActionSheetLauncher(user: tweet.user)
+            actionSheetLauncher.delegate = self
+            actionSheetLauncher.show()
+        } else {
+            UserService.shared.checkIfUserIsFollowed(uid: tweet.user.uid, completion: { isFollowed in
+                var user = self.tweet.user
+                user.isFollowed = isFollowed
+                self.actionSheetLauncher = ActionSheetLauncher(user: user)
+                self.actionSheetLauncher.delegate = self
+                self.actionSheetLauncher.show()
+            })
+        }
     }
 }
 
+// MARK: - ActionSheetLauncherDelegate
+
+extension TweetController: ActionSheetLauncherDelegate {
+    func didSelect(option: ActionSheetOptions) {
+        print("DEBUG: Option in controller is \(option.description)")
+    }
+}
