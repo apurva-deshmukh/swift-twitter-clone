@@ -20,8 +20,12 @@ struct TweetService {
                       "likes": 0,
                       "retweets": 0,
                       "caption": caption] as [String: Any]
+        let ref = DB_REF_TWEETS.childByAutoId()
         
-        DB_REF_TWEETS.childByAutoId().updateChildValues(values, withCompletionBlock: completion)
+        ref.updateChildValues(values, withCompletionBlock: { error, ref in
+            guard let tweetId = ref.key else { return }
+            DB_REF_USER_TWEETS.child(uid).updateChildValues([tweetId: 1], withCompletionBlock: completion)
+        })
     }
     
     func fetchTweets(completion: @escaping([Tweet]) -> Void) {
