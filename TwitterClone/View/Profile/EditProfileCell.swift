@@ -16,15 +16,6 @@ class EditProfileCell: UITableViewCell {
     
     // MARK: - Properties
     
-    var viewModel: EditProfileViewModel? {
-        didSet {
-            configure()
-        }
-    }
-    
-    weak var delegate: EditProfileCellDelegate?
-    
-    
     // MARK: - Lifecycle
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
