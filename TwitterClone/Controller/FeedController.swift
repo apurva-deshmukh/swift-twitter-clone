@@ -46,7 +46,18 @@ class FeedController: UICollectionViewController {
     func fetchTweets() {
         TweetService.shared.fetchTweets(completion: { tweets in
             self.tweets = tweets
+            self.checkIfUserLikedTweets(tweets)
         })
+    }
+    
+    func checkIfUserLikedTweets(_ tweets: [Tweet]) {
+        for (index, tweet) in tweets.enumerated() {
+            TweetService.shared.checkIfUserLikedTweet(tweet, completion: { didLike in
+                guard didLike == true else { return }
+                
+                self.tweets[index].didLike = true
+            })
+        }
     }
     
     // MARK: - Helpers
