@@ -53,14 +53,10 @@ struct TweetService {
         var tweets = [Tweet]()
         DB_REF_USER_TWEETS.child(user.uid).observe(.childAdded, with: { snapshot in
             let tweetId = snapshot.key
-            DB_REF_TWEETS.child(tweetId).observeSingleEvent(of: .value, with: { snapshot in
-                guard let dictionary = snapshot.value as? [String: Any] else { return }
-                guard let uid = dictionary["uid"] as? String else { return }
-                UserService.shared.fetchUser(uid: uid, completion: { user in
-                    let tweet = Tweet(user: user, tweetId: tweetId, dictionary: dictionary)
-                    tweets.append(tweet)
-                    completion(tweets)
-                })
+            
+            self.fetchTweet(withTweetId: tweetId, completion: { tweet in
+                tweets.append(tweet)
+                completion(tweets)
             })
         })
     }
@@ -105,6 +101,17 @@ struct TweetService {
         
         DB_REF_USER_LIKES.child(uid).child(tweet.tweetId).observeSingleEvent(of: .value, with: { snapshot in
             completion(snapshot.exists())
+        })
+    }
+    
+    func fetchTweet(withTweetId tweetId: String, completion: @escaping(Tweet) -> Void) {
+        DB_REF_TWEETS.child(tweetId).observeSingleEvent(of: .value, with: { snapshot in
+            guard let dictionary = snapshot.value as? [String: Any] else { return }
+            guard let uid = dictionary["uid"] as? String else { return }
+            UserService.shared.fetchUser(uid: uid, completion: { user in
+                let tweet = Tweet(user: user, tweetId: tweetId, dictionary: dictionary)
+                completion(tweet)
+            })
         })
     }
     
