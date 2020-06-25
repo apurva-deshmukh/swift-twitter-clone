@@ -65,7 +65,8 @@ class ProfileController: UICollectionViewController {
     
     func fetchTweets() {
         TweetService.shared.fetchTweets(forUser: user, completion: { tweets in
-            self.currentDataSource = tweets
+            self.tweets = tweets
+            self.collectionView.reloadData()
         })
     }
     
