@@ -75,9 +75,10 @@ struct TweetService {
             DB_REF_TWEET_REPLIES.child(tweetKey).child(replyKey).observeSingleEvent(of: .value, with: { snapshot in
                 guard let dictionary = snapshot.value as? [String: Any] else { return }
                 guard let uid = dictionary["uid"] as? String else { return }
+                let replyId = snapshot.key
                 UserService.shared.fetchUser(uid: uid, completion: { user in
-                    let tweet = Tweet(user: user, tweetId: tweetKey, dictionary: dictionary)
-                    replies.append(tweet)
+                    let reply = Tweet(user: user, tweetId: replyId, dictionary: dictionary)
+                    replies.append(reply)
                     completion(replies)
                 })
             })
