@@ -32,6 +32,7 @@
 		EE8169C524A3F9C400F7DEC9 /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8169C424A3F9C400F7DEC9 /* ActionSheetLauncher.swift */; };
 		EE8169C724A4006A00F7DEC9 /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8169C624A4006A00F7DEC9 /* ActionSheetCell.swift */; };
 		EE8169C924A404F300F7DEC9 /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8169C824A404F300F7DEC9 /* ActionSheetViewModel.swift */; };
+		EE8169CB24A4ED2700F7DEC9 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8169CA24A4ED2700F7DEC9 /* Notification.swift */; };
 		EEDAB42624A0F61F000283C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDAB42524A0F61F000283C0 /* Constants.swift */; };
 		EEDAB42824A0FA8F000283C0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDAB42724A0FA8F000283C0 /* AuthService.swift */; };
 		EEE08AAE249E94B900256C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE08AAD249E94B900256C6D /* AppDelegate.swift */; };
@@ -75,6 +76,7 @@
 		EE8169C424A3F9C400F7DEC9 /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		EE8169C624A4006A00F7DEC9 /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCell.swift; sourceTree = "<group>"; };
 		EE8169C824A404F300F7DEC9 /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
+		EE8169CA24A4ED2700F7DEC9 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		EEDAB42524A0F61F000283C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EEDAB42724A0FA8F000283C0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		EEE08AAA249E94B900256C6D /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +238,7 @@
 			children = (
 				EE076C3624A10BC900F23703 /* User.swift */,
 				EE076C3E24A1453600F23703 /* Tweet.swift */,
+				EE8169CA24A4ED2700F7DEC9 /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				EE5F3F6224A16A6200BC4128 /* ProfileHeader.swift in Sources */,
 				EE076C4124A14A1800F23703 /* TweetCell.swift in Sources */,
 				EE0B096424A01E17003772F2 /* LoginController.swift in Sources */,
+				EE8169CB24A4ED2700F7DEC9 /* Notification.swift in Sources */,
 				EEDAB42824A0FA8F000283C0 /* AuthService.swift in Sources */,
 				EE5F3F6824A1A1E500BC4128 /* ProfileHeaderViewModel.swift in Sources */,
 				EE076C3924A1358700F23703 /* UploadTweetController.swift in Sources */,
