@@ -69,6 +69,15 @@ struct TweetViewModel {
         return UIImage(named: imageName)!
     }
     
+    var shouldHideReplyLabel: Bool {
+        return !tweet.isReply
+    }
+    
+    var replyText: String? {
+        guard let replyingTo = tweet.replyingTo else { return nil }
+        return "➣ replying to @\(replyingTo)"
+    }
+    
     // MARK: Lifecycle
     
     init(tweet: Tweet) {
