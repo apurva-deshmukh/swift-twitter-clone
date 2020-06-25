@@ -65,7 +65,7 @@ struct TweetService {
         })
     }
     
-    func fetchReplies(forTweet tweet: Tweet, completion: @escaping ([Tweet]) -> Void) {
+    func fetchReplies(forTweet tweet: Tweet, completion: @escaping([Tweet]) -> Void) {
         var tweets = [Tweet]()
         DB_REF_TWEET_REPLIES.child(tweet.tweetId).observe(.childAdded) { snapshot in
             guard let dictionary = snapshot.value as? [String: Any] else { return }
@@ -76,6 +76,23 @@ struct TweetService {
                 let tweet = Tweet(user: user, tweetId: tweetId, dictionary: dictionary)
                 tweets.append(tweet)
                 completion(tweets)
+            })
+        }
+    }
+    
+    func likeTweet(tweet: Tweet, completion: @escaping(DatabaseCompletion)) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let likes = tweet.didLike ? tweet.likes - 1 : tweet.likes + 1
+        
+        DB_REF_TWEETS.child(tweet.tweetId).child("likes").setValue(likes)
+        
+        if tweet.didLike {
+            // unlike tweet
+        } else {
+            // like tweet
+            DB_REF_USER_LIKES.child(uid).updateChildValues([tweet.tweetId: 1], withCompletionBlock: { error, ref in
+                DB_REF_TWEET_LIKES.child(tweet.tweetId).updateChildValues([uid: 1], withCompletionBlock: completion)
             })
         }
     }
