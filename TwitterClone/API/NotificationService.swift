@@ -25,4 +25,20 @@ struct NotificationService {
             DB_REF_NOTIFICATIONS.child(user.uid).childByAutoId().updateChildValues(values)
         }
     }
+    
+    func fetchNotifications(completion: @escaping([Notification]) -> Void) {
+        var notifications = [Notification]()
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        DB_REF_NOTIFICATIONS.child(uid).observe(.childAdded, with: { snapshot in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else { return }
+            guard let uid = dictionary["uid"] as? String else { return }
+            
+            UserService.shared.fetchUser(uid: uid, completion: { user in
+                let notification = Notification(user: user, dictionary: dictionary)
+                notifications.append(notification)
+                completion(notifications)
+            })
+        })
+    }
 }
