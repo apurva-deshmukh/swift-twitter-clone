@@ -8,9 +8,22 @@
 
 import UIKit
 
+protocol EditProfileDelegate: class {
+    func updateUserInfo(_ cell: EditProfileCell)
+}
+
 class EditProfileCell: UITableViewCell {
     
     // MARK: - Properties
+    
+    var viewModel: EditProfileViewModel? {
+        didSet {
+            configure()
+        }
+    }
+    
+    weak var delegate: EditProfileCellDelegate?
+    
     
     // MARK: - Lifecycle
     
@@ -24,4 +37,8 @@ class EditProfileCell: UITableViewCell {
     }
     
     // MARK: - Helpers
+    
+    func configure() {
+        
+    }
 }
